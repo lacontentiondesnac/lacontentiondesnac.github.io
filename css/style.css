@@ -3,7 +3,7 @@
     --secondary: #f3efe7;
     --dark: #011a46;
     --light: #ffffff;
-    --accent: #0f714e;
+    --accent: #570d9c;
 }
 
 body {
@@ -203,5 +203,33 @@ body {
 
     .image-button {
         height: 230px;
+    }
+}
+
+/*======================================*/
+
+.list-group-item {
+    color: var(--dark);
+    background-color: transparent;
+}
+
+.animal-video-section {
+    margin-bottom: 6rem;
+}
+
+.animal-video-section:last-child {
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 991.98px) {
+    .animal-video-section {
+        margin-bottom: 4rem;
+    }
+
+    .main-image,
+    .about-image,
+    .animal-main-image {
+        height: 340px;
     }
 }
