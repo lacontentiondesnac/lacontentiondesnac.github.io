@@ -1,88 +1,79 @@
 const animals = [
     {
-        name: "Lapin",
-        href: "Lapin.html",
         image: "images/photos/lapin.jpg",
-        alt: "Lapin",
-        ariaLabel: "Lire les informations sur le lapin",
-        description: "Lapin."
+        imageText: "Lapin",
+        titleText: "Lapin",
+        description: "Lapin.",
+        href: "Lapin.html"
     },
     {
-        name: "Cochon d’Inde",
-        href: "cochon-inde.html",
         image: "",
-        alt: "Cochon d’Inde",
-        ariaLabel: "Lire la fiche sur le cochon d’Inde",
-        description: "Cochon d’Inde."
+        imageText: "Cochon d’Inde",
+        titleText: "Cochon d’Inde",
+        description: "Cochon d’Inde.",
+        href: "CochonDinde.html"
     },
     {
-        name: "Furet",
-        href: "furet.html",
         image: "",
-        alt: "Furet",
-        ariaLabel: "Lire la fiche sur le furet",
-        description: "Furet."
+        imageText: "Furet",
+        titleText: "Furet",
+        description: "Furet.",
+        href: "Furet.html"
     },
     {
-        name: "Rat et souris",
-        href: "ratSouris.html",
         image: "",
-        alt: "Rat domestique",
-        ariaLabel: "Lire la fiche sur les rats et souris",
-        description: "Rat et souris."
+        imageText: "Rat et souris",
+        titleText: "Rat et souris",
+        description: "Rat et souris.",
+        href: "RatSouris.html"
     },
     {
-        name: "Poule",
-        href: "Poule.html",
         image: "",
-        alt: "Poule",
-        ariaLabel: "Lire la fiche sur les poules",
-        description: "Poule."
+        imageText: "Poule",
+        titleText: "Poule",
+        description: "Poule.",
+        href: "Poule.html"
     },
     {
-        name: "Oiseau de petite taille",
-        href: "oiseauPetit.html",
         image: "",
-        alt: "Oiseau de petite taille",
-        ariaLabel: "Lire la fiche sur les oiseaux de petite taille",
-        description: "Oiseau de petite taille."
+        imageText: "Oiseau de petite taille",
+        titleText: "Oiseau de petite taille",
+        description: "Oiseau de petite taille.",
+        href: "OiseauPetit.html"
     },
     {
-        name: "Oiseau de grande taille",
-        href: "oiseauGrand.html",
         image: "",
-        alt: "Oiseau de grande taille",
-        ariaLabel: "Lire la fiche sur les oiseaux de grande taille",
-        description: "Oiseau de grande taille."
+        imageText: "Oiseau de grande taille",
+        titleText: "Oiseau de grande taille",
+        description: "Oiseau de grande taille.",
+        href: "OiseauGrand.html"
     },
     {
-        name: "Lézard",
-        href: "Lezard.html",
         image: "",
-        alt: "Lézard",
-        ariaLabel: "Lire la fiche sur les lézards",
-        description: "Lézard."
+        imageText: "Lézard",
+        titleText: "Lézard",
+        description: "Lézard.",
+        href: "Lezard.html"
     },
     {
-        name: "Tortue",
-        href: "Tortue.html",
         image: "",
-        alt: "Tortue",
-        ariaLabel: "Lire la fiche sur les tortues",
-        description: "Tortue."
+        imageText: "Tortue",
+        titleText: "Tortue",
+        description: "Tortue.",
+        href: "Tortue.html"
     },
     {
-        name: "Serpent",
-        href: "Serpent.html",
         image: "",
-        alt: "Serpent",
-        ariaLabel: "Lire la fiche sur les serpents",
-        description: "Serpent."
+        imageText: "Serpent",
+        titleText: "Serpent",
+        description: "Serpent.",
+        href: "Serpent.html"
     }
 ];
 
 const cardsContainer = document.querySelector("#nac-cards");
 const cardTemplate = document.querySelector("#nac-card-template");
+const mainNavLinks = document.querySelector("#mainNavLinks");
 
 animals.forEach((animal) => {
     const card = cardTemplate.content.cloneNode(true);
@@ -95,16 +86,29 @@ animals.forEach((animal) => {
     const button = card.querySelector(".btn");
 
     imageLink.href = animal.href;
-    imageLink.setAttribute("aria-label", animal.ariaLabel);
+    imageLink.setAttribute("aria-label", animal.imageText);
 
     image.src = animal.image;
-    image.alt = animal.alt;
+    image.alt = animal.imageText;
 
-    imageText.textContent = animal.name;
-    title.textContent = animal.name;
+    imageText.textContent = animal.imageText;
+    title.textContent = animal.titleText;
     description.textContent = animal.description;
 
     button.href = animal.href;
 
     cardsContainer.appendChild(card);
+});
+
+animals.forEach((animal) => {
+    const navItem = document.createElement("li");
+    navItem.className = "nav-item";
+
+    const navLink = document.createElement("a");
+    navLink.className = "nav-link";
+    navLink.href = animal.href;
+    navLink.textContent = animal.imageText;
+
+    navItem.appendChild(navLink);
+    mainNavLinks.appendChild(navItem);
 });
