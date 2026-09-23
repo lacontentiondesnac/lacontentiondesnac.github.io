@@ -102,10 +102,9 @@ animals.forEach((animal) => {
 
 animals.forEach((animal) => {
     const navItem = document.createElement("li");
-    navItem.className = "nav-item";
 
     const navLink = document.createElement("a");
-    navLink.className = "nav-link";
+    navLink.className = "dropdown-item";
     navLink.href = animal.href;
     navLink.textContent = animal.imageText;
 

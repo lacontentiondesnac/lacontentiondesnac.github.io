@@ -22,7 +22,21 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" id="mainNavLinks"></ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="animalsDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Animals
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end" id="mainNavLinks" aria-labelledby="animalsDropdown">
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:lacontentiondesnac@gmail.com">Contact</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -74,6 +88,7 @@
 </footer>
 
 <template id="nac-card-template">
+<!--    <div class="col-md-6 col-lg-4 col-xl-3">-->
     <div class="col-md-6 col-lg-4">
         <article class="card nac-card h-100 border-0">
             <a class="image-button">
