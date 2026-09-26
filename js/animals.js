@@ -28,7 +28,7 @@ const animals = [
     },
     {
         id: "cochonDinde",
-        image: "",
+        image: "images/photos/cochonDinde.jpg",
         imageText: "Cochon d’Inde",
         titleText: "Cochon d’Inde",
         description: "Cochon d’Inde.",
@@ -47,7 +47,7 @@ const animals = [
     },
     {
         id: "furet",
-        image: "",
+        image: "images/photos/furet.jpg",
         imageText: "Furet",
         titleText: "Furet",
         description: "Furet.",
@@ -66,7 +66,7 @@ const animals = [
     },
     {
         id: "rat",
-        image: "",
+        image: "images/photos/rat.jpg",
         imageText: "Rat et souris",
         titleText: "Rat et souris",
         description: "Rat et souris.",
@@ -85,7 +85,7 @@ const animals = [
     },
     {
         id: "poule",
-        image: "",
+        image: "images/photos/poule.jpg",
         imageText: "Poule",
         titleText: "Poule",
         description: "Poule.",
@@ -104,7 +104,7 @@ const animals = [
     },
     {
         id: "oiseauPetit",
-        image: "",
+        image: "images/photos/oiseauPetit.jpg",
         imageText: "Oiseau de petite taille",
         titleText: "Oiseau de petite taille",
         description: "Oiseau de petite taille.",
@@ -123,7 +123,7 @@ const animals = [
     },
     {
         id: "oiseauGrand",
-        image: "",
+        image: "images/photos/oiseauGrand.jpg",
         imageText: "Oiseau de grande taille",
         titleText: "Oiseau de grande taille",
         description: "Oiseau de grande taille.",
@@ -142,7 +142,7 @@ const animals = [
     },
     {
         id: "lezard",
-        image: "",
+        image: "images/photos/lezard.jpg",
         imageText: "Lézard",
         titleText: "Lézard",
         description: "Lézard.",
@@ -161,7 +161,7 @@ const animals = [
     },
     {
         id: "tortue",
-        image: "",
+        image: "images/photos/tortue.jpg",
         imageText: "Tortue",
         titleText: "Tortue",
         description: "Tortue.",
@@ -180,7 +180,7 @@ const animals = [
     },
     {
         id: "serpent",
-        image: "",
+        image: "images/photos/serpent.jpg",
         imageText: "Serpent",
         titleText: "Serpent",
         description: "Serpent.",
