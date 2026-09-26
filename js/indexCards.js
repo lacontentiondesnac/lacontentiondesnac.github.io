@@ -1,8 +1,10 @@
 const cardsContainer = document.querySelector("#nac-cards");
 const cardTemplate = document.querySelector("#nac-card-template");
 
-if (cardsContainer && cardTemplate) {
-    animals.forEach((animal) => {
+if (cardsContainer && cardTemplate)
+{
+    animals.forEach((animal) =>
+    {
         const card = cardTemplate.content.cloneNode(true);
 
         const imageLink = card.querySelector(".image-button");

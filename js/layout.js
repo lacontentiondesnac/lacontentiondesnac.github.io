@@ -1,7 +1,8 @@
 const navbarContainer = document.querySelector("#commonNavbar");
 const footerContainer = document.querySelector("#commonFooter");
 
-if (navbarContainer) {
+if (navbarContainer)
+{
     navbarContainer.innerHTML = `
         <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
             <div class="container">
@@ -36,7 +37,8 @@ if (navbarContainer) {
     `;
 }
 
-if (footerContainer) {
+if (footerContainer)
+{
     footerContainer.innerHTML = `
         <footer class="footer-section py-4 text-center text-white">
             <div class="container">

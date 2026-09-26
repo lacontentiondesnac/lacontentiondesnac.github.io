@@ -1,7 +1,9 @@
 const mainNavLinks = document.querySelector("#mainNavLinks");
 
-if (mainNavLinks) {
-    animals.forEach((animal) => {
+if (mainNavLinks)
+{
+    animals.forEach((animal) =>
+    {
         const navItem = document.createElement("li");
 
         const navLink = document.createElement("a");
