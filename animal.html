@@ -24,7 +24,7 @@
             <div id="animal-video-sections"></div>
 
             <div class="text-center mt-5">
-                <a href="index.html#nac-list" class="btn btn-primary-custom rounded-pill px-4">
+                <a href="index.html#nac-list" class="btn btn-primary-custom rounded-pill px-4" id="back-button">
                     Retour
                 </a>
             </div>
@@ -38,7 +38,8 @@
     <div class="row g-5 align-items-center animal-video-section">
         <div class="col-lg-6">
             <div class="ratio ratio-16x9 video-card">
-                <iframe allowfullscreen></iframe>
+                <iframe loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                        allow="encrypted-media; picture-in-picture; accelerometer; gyroscope" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -51,7 +52,8 @@
     </div>
 </template>
 
-<script src="js/animals.js"></script>
+<script src="js/animalData.js"></script>
+<script src="js/language.js"></script>
 <script src="js/layout.js"></script>
 <script src="js/navAnimals.js"></script>
 <script src="js/animalPage.js"></script>

@@ -1,46 +1,70 @@
-const urlParams = new URLSearchParams(window.location.search);
-const currentAnimalId = urlParams.get("animal");
+const animalPageParams = new URLSearchParams(window.location.search);
+const currentAnimalId = animalPageParams.get("animal");
 
-const currentAnimal = animals.find((animal) => animal.id === currentAnimalId);
+const currentAnimal = animalData.find((animal) => animal.id === currentAnimalId);
 
 const animalPageTitle = document.querySelector("#animal-page-title");
 const animalVideoSections = document.querySelector("#animal-video-sections");
 const animalVideoTemplate = document.querySelector("#animal-video-template");
+const backButton = document.querySelector("#back-button");
 
-if (currentAnimal && animalPageTitle)
+const animalPageText =
+    {
+        fr: {
+            back: "Retour",
+        },
+        en: {
+            back: "Back",
+        }
+    };
+
+const currentAnimalPageText = animalPageText[currentLang] || animalPageText.fr;
+
+if (backButton)
 {
-    animalPageTitle.textContent = currentAnimal.pageTitle || currentAnimal.titleText;
-    document.title = `${currentAnimal.titleText} - La Contention Des NAC`;
+    backButton.textContent = currentAnimalPageText.back;
+    backButton.href = `index.html?lang=${currentLang}#nac-list`;
 }
 
-if (currentAnimal && animalVideoSections && animalVideoTemplate)
+if (currentAnimal)
 {
-    currentAnimal.videos.forEach((video, index) =>
+    const animalContent = getAnimalContent(currentAnimal);
+
+    if (animalPageTitle)
     {
-        const videoSection = animalVideoTemplate.content.cloneNode(true);
+        animalPageTitle.textContent = animalContent.pageTitle || animalContent.titleText;
+        document.title = `${animalContent.titleText} - La Contention Des NAC`;
+    }
 
-        const row = videoSection.querySelector(".animal-video-section");
-        const iframe = videoSection.querySelector("iframe");
-        const title = videoSection.querySelector("h2");
-        const textContainer = videoSection.querySelector(".animal-video-text");
-
-        if (index % 2 === 1)
+    if (animalVideoSections && animalVideoTemplate)
+    {
+        animalContent.videos.forEach((video, index) =>
         {
-            row.classList.add("flex-lg-row-reverse");
-        }
+            const videoSection = animalVideoTemplate.content.cloneNode(true);
 
-        iframe.src = video.url;
-        iframe.title = video.title;
+            const row = videoSection.querySelector(".animal-video-section");
+            const iframe = videoSection.querySelector("iframe");
+            const title = videoSection.querySelector("h2");
+            const textContainer = videoSection.querySelector(".animal-video-text");
 
-        title.textContent = video.title;
+            if (index % 2 === 1)
+            {
+                row.classList.add("flex-lg-row-reverse");
+            }
 
-        video.text.forEach((paragraphText) =>
-        {
-            const paragraph = document.createElement("p");
-            paragraph.textContent = paragraphText;
-            textContainer.appendChild(paragraph);
+            iframe.src = video.url;
+            iframe.title = video.title;
+
+            title.textContent = video.title;
+
+            video.text.forEach((paragraphText) =>
+            {
+                const paragraph = document.createElement("p");
+                paragraph.textContent = paragraphText;
+                textContainer.appendChild(paragraph);
+            });
+
+            animalVideoSections.appendChild(videoSection);
         });
-
-        animalVideoSections.appendChild(videoSection);
-    });
+    }
 }
