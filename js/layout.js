@@ -44,13 +44,13 @@ if (navbarContainer)
     navbarContainer.innerHTML = `
         <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
             <div class="container">
-                <a class="btn btn-outline-secondary me-2" href="index.html?lang=${currentLang}">
+                <a class="btn btn-primary-custom me-2" href="index.html?lang=${currentLang}">
                    ${currentLayoutText.home}
                 </a>
    
-                <a class="navbar-brand fw-bold brand-color d-none d-md-block" href="index.html?lang=${currentLang}">
+                <span class="navbar-brand fw-bold brand-color d-none d-md-block">
                     ${currentLayoutText.pageTitle}
-                </a>
+                </span>
 
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
                         aria-controls="mainNavbar" aria-expanded="false" aria-label="Menu">
