@@ -1,6 +1,7 @@
 const homeText = {
     fr: {
         title: "La contention des NAC",
+        intro: "Site sur la contention des Nouveaux Animaux de Compagnie (NAC) réalisé à l'occasion d’une thèse.",
         subtitle: "Cliquez sur un animal.",
         contactTitle: "Contact",
         contactButton: "Envoyer un message",
@@ -8,6 +9,7 @@ const homeText = {
     },
     en: {
         title: "NAC restraint",
+        intro: "Website on the restraint of new pets (Nouveaux Animaux de Compagnie - NAC) created as part of a thesis.",
         subtitle: "Click on an animal.",
         contactTitle: "Contact",
         contactButton: "Send a message",
@@ -18,6 +20,7 @@ const homeText = {
 const currentHomeText = homeText[currentLang] || homeText.fr;
 
 const homeTitle = document.querySelector("#home-title");
+const homeIntro = document.querySelector("#home-intro");
 const homeSubtitle = document.querySelector("#home-subtitle");
 const contactTitle = document.querySelector("#contact-title");
 const contactButton = document.querySelector("#contact-button");
@@ -25,6 +28,11 @@ const contactButton = document.querySelector("#contact-button");
 if (homeTitle)
 {
     homeTitle.textContent = currentHomeText.title;
+}
+
+if (homeIntro)
+{
+    homeIntro.textContent = currentHomeText.intro;
 }
 
 if (homeSubtitle)
