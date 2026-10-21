@@ -26,6 +26,12 @@ body {
     font-size: 1.35rem;
 }
 
+@media (max-width: 767.98px) {
+    .navbar.sticky-top {
+        position: static;
+    }
+}
+
 .nav-link {
     color: var(--dark);
 }
