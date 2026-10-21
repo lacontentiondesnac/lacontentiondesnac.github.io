@@ -4,6 +4,8 @@ const footerContainer = document.querySelector("#commonFooter");
 // === langage ===
 const layoutText = {
     fr: {
+        home: "Accueil",
+        pageTitle: "La contention des NAC",
         animals: "Animaux",
         contact: "Contact",
         french: "FR",
@@ -11,6 +13,8 @@ const layoutText = {
         footer: "© 2026 La Contention Des NAC — Tous droits réservés"
     },
     en: {
+        home: "Home",
+        pageTitle: "NAC restraint",
         animals: "Animals",
         contact: "Contact",
         french: "FR",
@@ -40,12 +44,16 @@ if (navbarContainer)
     navbarContainer.innerHTML = `
         <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
             <div class="container">
-                <a class="navbar-brand fw-bold brand-color" href="index.html?lang=${currentLang}">
-                    La Contention Des NAC
+                <a class="btn btn-outline-secondary me-2" href="index.html?lang=${currentLang}">
+                   ${currentLayoutText.home}
+                </a>
+   
+                <a class="navbar-brand fw-bold brand-color d-none d-md-block" href="index.html?lang=${currentLang}">
+                    ${currentLayoutText.pageTitle}
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Afficher le menu">
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -66,11 +74,11 @@ if (navbarContainer)
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="${getLanguageSwitchUrl("fr")}">                                ${currentLayoutText.french}                            </a>
+                            <a class="nav-link" href="${getLanguageSwitchUrl("fr")}"> ${currentLayoutText.french} </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="${getLanguageSwitchUrl("en")}">                                ${currentLayoutText.english}                            </a>
+                            <a class="nav-link" href="${getLanguageSwitchUrl("en")}"> ${currentLayoutText.english} </a>
                         </li>
                     </ul>
                 </div>
