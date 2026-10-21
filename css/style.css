@@ -27,7 +27,7 @@ body {
 }
 
 @media (max-width: 767.98px) {
-    .navbar.sticky-top {
+    #commonNavbar.sticky-top {
         position: static;
     }
 }
