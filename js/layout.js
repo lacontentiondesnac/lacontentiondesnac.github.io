@@ -42,7 +42,7 @@ function getLanguageSwitchUrl(language)
 if (navbarContainer)
 {
     navbarContainer.innerHTML = `
-        <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
             <div class="container">
                 <a class="btn btn-primary-custom me-2" href="index.html?lang=${currentLang}">
                    ${currentLayoutText.home}
