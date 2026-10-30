@@ -187,8 +187,8 @@ const animalData = [
                 pageTitle: "La contention de la poule",
                 videos: [
                     {
-                        title: "Vidéo 1",
-                        url: "https://www.youtube-nocookie.com/embed/VIDEO_ID",
+                        title: "Poule flancs",
+                        url: "https://www.youtube-nocookie.com/qiaQGZBITEo",
                         text: [
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisl aliquet nisl, eget aliquet nisl nisl eget nisl.",
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisl aliquet nisl, eget aliquet nisl nisl eget nisl."
@@ -204,8 +204,8 @@ const animalData = [
                 pageTitle: "Chicken restraint",
                 videos: [
                     {
-                        title: "Video 1",
-                        url: "https://www.youtube-nocookie.com/embed/VIDEO_ID",
+                        title: "Chicken sides",
+                        url: "https://www.youtube-nocookie.com/embed/qiaQGZBITEo",
                         text: [
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisl aliquet nisl, eget aliquet nisl nisl eget nisl.",
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisl aliquet nisl nisl eget nisl."
