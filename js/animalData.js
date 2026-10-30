@@ -188,7 +188,7 @@ const animalData = [
                 videos: [
                     {
                         title: "Poule flancs",
-                        url: "https://www.youtube-nocookie.com/qiaQGZBITEo",
+                        url: "https://www.youtube-nocookie.com/embed/qiaQGZBITEo",
                         text: [
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisl aliquet nisl, eget aliquet nisl nisl eget nisl.",
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisl aliquet nisl, eget aliquet nisl nisl eget nisl."
